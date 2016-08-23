@@ -1,0 +1,4 @@
+sceneSetups:
+- path: C:/Users/140522J/Downloads/IGCC_Team9-master/IGCC_Team9-master/TeleKinesisVR/Assets/Scenes/TestScene.unity
+  isLoaded: 1
+  isActive: 1
