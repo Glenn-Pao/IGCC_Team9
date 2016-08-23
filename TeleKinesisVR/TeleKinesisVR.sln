@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{A59D61F1-DD21-4044-A166-447A6AD33310}") = "TeleKinesisVR", "Assembly-CSharp.csproj", "{4FF359E7-7E86-F3AB-4D03-5A2CAEE329D8}"
+EndProject
+Project("{A59D61F1-DD21-4044-A166-447A6AD33310}") = "TeleKinesisVR", "Assembly-CSharp-Editor.csproj", "{84041FB7-2503-5A3A-821C-8C9033352DE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4FF359E7-7E86-F3AB-4D03-5A2CAEE329D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FF359E7-7E86-F3AB-4D03-5A2CAEE329D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FF359E7-7E86-F3AB-4D03-5A2CAEE329D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FF359E7-7E86-F3AB-4D03-5A2CAEE329D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84041FB7-2503-5A3A-821C-8C9033352DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84041FB7-2503-5A3A-821C-8C9033352DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84041FB7-2503-5A3A-821C-8C9033352DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84041FB7-2503-5A3A-821C-8C9033352DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
