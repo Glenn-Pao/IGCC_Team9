@@ -35,7 +35,7 @@ public class Microphone_Input : MonoBehaviour
         while(!(Microphone.GetPosition(null) > 0))
         {
             src.Play();
-            //src.mute = true;    //Mute yourself
+            //src.mute = true;    //No, it doesn't work when you do this
         }
     }
 
@@ -48,14 +48,6 @@ public class Microphone_Input : MonoBehaviour
         }
 
         //Determine if voice is loud enough
-        voiceLoudEnough();
-
-        if (Input.GetKeyDown(KeyCode.F2))
-        {
-            Microphone.End(null);
-            src.Play(); // Play the audio source!
-        }
-        //check the loudness here
         voiceLoudEnough();
     }
 
@@ -70,9 +62,11 @@ public class Microphone_Input : MonoBehaviour
 
         for (int i = 0; i < sampleCount; i++)
         {
+            //calculate the total absolute values to of the points in the graph given
             sum += Mathf.Abs(samples[i]);
         }
 
+        //return the average value to determine its volume
         return sum / sampleCount;
     }
 
@@ -80,10 +74,10 @@ public class Microphone_Input : MonoBehaviour
     //return true if it exceeds the threshold
     bool voiceLoudEnough()
     {
-        //determine the loudness of the sound
+        //determine the loudness of the sound with sensitivity factored in
         loudness = GetAverageVolume() * sensitivity;
 
-        //if it exceeds the threshold
+        //if it exceeds the threshold defined
         if(loudness > threshold)
         {
             Debug.Log("Loudness: " + loudness);
