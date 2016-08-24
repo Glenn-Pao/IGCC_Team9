@@ -72,7 +72,11 @@
      <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
      <Compile Include="Assets\OVR\Scripts\Util\OVRTrackerBounds.cs" />
      <Compile Include="Assets\Scripts\Camera\InputManager.cs" />
+     <Compile Include="Assets\Scripts\Classes\Command.cs" />
      <Compile Include="Assets\Scripts\Classes\GeneratorInfo.cs" />
+     <Compile Include="Assets\Scripts\Classes\UnitBehavior.cs" />
+     <Compile Include="Assets\Scripts\Classes\UnitClass.cs" />
+     <Compile Include="Assets\Scripts\Classes\WeaponClass.cs" />
      <Compile Include="Assets\Scripts\Object\GeneratorScript.cs" />
      <Compile Include="Assets\Scripts\Object\NegativeScript.cs" />
      <Compile Include="Assets\Scripts\Object\PositiveScript.cs" />
