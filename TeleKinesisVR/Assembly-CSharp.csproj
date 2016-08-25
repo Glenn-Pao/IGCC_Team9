@@ -88,6 +88,9 @@
      <Compile Include="Assets\Scripts\Object\GeneratorScript.cs" />
      <Compile Include="Assets\Scripts\Object\NegativeScript.cs" />
      <Compile Include="Assets\Scripts\Object\PositiveScript.cs" />
+     <Compile Include="Assets\Scripts\ProjectileCollider.cs" />
+     <Compile Include="Assets\Scripts\WaypointSricpt.cs" />
+     <Compile Include="Assets\WaypointSricpt.cs" />
      <None Include="Assets\Shader\Billboard.shader" />
      <None Include="Assets\OVR\Moonlight\Shaders\OVRColorRampAlpha.shader" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
