@@ -33,4 +33,21 @@ public class GameManager : MonoBehaviour
             DebugText.text = "Monster class initialized";
         }
 	}
+
+    void MoveToMonster()
+    {
+        arrArchers[0].projectile.transform.position = Vector3.MoveTowards(arrArchers[0].projectile.transform.position, arrMonsters[0].transform.position, Time.deltaTime * 50);
+
+        if (arrMonsters[0].GetComponent<BoxCollider>().transform.position.x > arrArchers[0].projectile.transform.position.x)
+        {
+            arrMonsters[0].gameObject.SetActive(false);
+        }
+    }
+
+    void Update()
+    {
+        Debug.Log(arrMonsters[0].transform.position);
+
+        MoveToMonster();
+    }
 }

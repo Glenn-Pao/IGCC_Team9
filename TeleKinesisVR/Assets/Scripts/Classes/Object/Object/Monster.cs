@@ -6,14 +6,14 @@ using System.Collections;
 public class Monster : Object
 {
     //the definition of weapons that the monster will use
-    //Bite attack
-    public BiteAttack bite;
+    ////Bite attack
+    //public BiteAttack bite;
 
-    //Tail sweep attack
-    public TailAttack sweep;
+    ////Tail sweep attack
+    //public TailAttack sweep;
 
-    //Acid spit attack
-    public AcidAttack acid;
+    ////Acid spit attack
+    //public AcidAttack acid;
 
     public void Init()
     {
@@ -24,23 +24,23 @@ public class Monster : Object
 
         //weapon definitions
 
-        //Bite attack
-        bite.setWeaponType(2);
-        bite.setFiringRate(5.0f);      
-        bite.setAmmoCount(0);
-        bite.setDamage(40);
+        ////Bite attack
+        //bite.setWeaponType(2);
+        //bite.setFiringRate(5.0f);      
+        //bite.setAmmoCount(0);
+        //bite.setDamage(40);
 
-        //Sweep attack
-        sweep.setWeaponType(3);
-        sweep.setFiringRate(4.0f);
-        sweep.setAmmoCount(0);
-        sweep.setDamage(30);
+        ////Sweep attack
+        //sweep.setWeaponType(3);
+        //sweep.setFiringRate(4.0f);
+        //sweep.setAmmoCount(0);
+        //sweep.setDamage(30);
 
-        //Acid attack
-        acid.setWeaponType(4);
-        acid.setFiringRate(3.0f);
-        acid.setAmmoCount(0);
-        acid.setDamage(20);
+        ////Acid attack
+        //acid.setWeaponType(4);
+        //acid.setFiringRate(3.0f);
+        //acid.setAmmoCount(0);
+        //acid.setDamage(20);
     }
 
 }

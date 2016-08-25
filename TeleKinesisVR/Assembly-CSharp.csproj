@@ -78,13 +78,12 @@
      <Compile Include="Assets\Scripts\Classes\Object\Object\GameManager.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\Monster.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\Object.cs" />
+     <Compile Include="Assets\Scripts\Classes\Object\Object\UnitBehavior.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Monster\AcidAttack.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Monster\BiteAttack.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Monster\TailAttack.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Soldiers\Arrow.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\WeaponClass.cs" />
-     <Compile Include="Assets\Scripts\Classes\UnitBehavior.cs" />
-     <Compile Include="Assets\Scripts\Classes\UnitClass.cs" />
      <Compile Include="Assets\Scripts\Object\GeneratorScript.cs" />
      <Compile Include="Assets\Scripts\Object\NegativeScript.cs" />
      <Compile Include="Assets\Scripts\Object\PositiveScript.cs" />
