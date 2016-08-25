@@ -8,11 +8,9 @@ public class UnitClass : MonoBehaviour {
     public int Health;
     bool Morale = true;
     int Difficulty = 4;
-    int Value;
-    public int UnitType;
-    Unit Units = Unit.PIKEMAN; 
+   public Unit Units = Unit.PIKEMAN; 
 
-    enum Unit
+   public enum Unit
     {
         PIKEMAN,
         ARCHER,
@@ -21,9 +19,9 @@ public class UnitClass : MonoBehaviour {
     }
 
 
+
 	// Use this for initialization
 	void Start () {
-        SetDifficulty( Value);
   
 
 	
@@ -35,13 +33,6 @@ public class UnitClass : MonoBehaviour {
 if(Difficulty == 4 && Health <= 75 ){ Morale = false; }
 
 
-else if (Difficulty == 3 && Health <= 60) { Morale = false; }
-      
-
-else if (Difficulty == 2 && Health <= 45){ Morale = false; }
-    
-
-else if (Difficulty == 1 && Health <= 25){ Morale = false; }
    
 
 
@@ -53,14 +44,6 @@ else if (Difficulty == 1 && Health <= 25){ Morale = false; }
 
 	
 	}
-
-   void SetDifficulty(int value)
-    {
-        Difficulty = value;
-
-
-    }
-
 
    public int ReduceHealth(int Reduce)
     {
@@ -74,37 +57,5 @@ else if (Difficulty == 1 && Health <= 25){ Morale = false; }
        return Ammunition;
    }
 
-    public void SetUnit()
-    {
 
-    }
-
-   // public void setUnitType(Unit unit)
-   // {
-   //this.Units = unit; 
-   // }
-    //public Unit SetUnitType(int Type)
-    //{
-    //    switch (Type)
-    //    {
-    //        case 0:
-    //            {
-    //                return Unit.PIKEMAN;
-    //            }
-    //        case 1:
-    //            {
-    //                return Unit.ARCHER;
-    //            }
-    //        case 2:
-    //            {
-    //                return Unit.BALLISTA;
-    //            }
-    //        case 3:
-    //            {
-    //                return Unit.MONSTER;
-    //            }
-    //        default:
-    //            { return 0; }
-    //    }
-    //}
 }
