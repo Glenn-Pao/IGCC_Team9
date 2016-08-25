@@ -31,8 +31,8 @@ public class UnitBehavior : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-
+	void Update () 
+    {
         switch(Soldier)
         {  
             case Stance.IDLE:
@@ -110,6 +110,18 @@ public class UnitBehavior : MonoBehaviour {
     AttackType GetAttackType()
     { 
         return SoldierAttack;
+    }
+
+
+    void ChangeStance(Stance Soldier)
+    {
+        //get the current stance of soldier
+        Soldier = getStance();
+
+        switch (Soldier)
+        {
+         
+        }
     }
 
   public  Stance SetStance(int Type)

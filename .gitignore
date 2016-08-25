@@ -32,3 +32,5 @@ sysinfo.txt
 *.info
 TeleKinesisVR/Library/ShaderCache/
 TeleKinesisVR/Library/metadata/
+*.zip
+*.meta

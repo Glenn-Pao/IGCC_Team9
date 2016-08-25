@@ -79,32 +79,32 @@ else if (Difficulty == 1 && Health <= 25){ Morale = false; }
 
     }
 
-    public void setUnitType(Unit unit)
-    {
-   this.Units = unit; 
-    }
-    public Unit SetUnitType(int Type)
-    {
-        switch (Type)
-        {
-            case 0:
-                {
-                    return Unit.PIKEMAN;
-                }
-            case 1:
-                {
-                    return Unit.ARCHER;
-                }
-            case 2:
-                {
-                    return Unit.BALLISTA;
-                }
-            case 3:
-                {
-                    return Unit.MONSTER;
-                }
-            default:
-                { return 0; }
-        }
-    }
+   // public void setUnitType(Unit unit)
+   // {
+   //this.Units = unit; 
+   // }
+    //public Unit SetUnitType(int Type)
+    //{
+    //    switch (Type)
+    //    {
+    //        case 0:
+    //            {
+    //                return Unit.PIKEMAN;
+    //            }
+    //        case 1:
+    //            {
+    //                return Unit.ARCHER;
+    //            }
+    //        case 2:
+    //            {
+    //                return Unit.BALLISTA;
+    //            }
+    //        case 3:
+    //            {
+    //                return Unit.MONSTER;
+    //            }
+    //        default:
+    //            { return 0; }
+    //    }
+    //}
 }
