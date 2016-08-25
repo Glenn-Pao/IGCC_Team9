@@ -1,12 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.IO;
 
 public class UnitBehavior : MonoBehaviour {
-
- public   Stance Soldier = Stance.IDLE;
-    AttackType SoldierAttack = AttackType.IDLE;
+    UnitClass UnitC;
+   public Stance Soldier = Stance.IDLE;
    public int Types = 0;
-
+   float elap;
+   int ChangeCounter = 0;
+   int CurrentChange = 0;
 
     public enum Stance
     {
@@ -16,58 +18,51 @@ public class UnitBehavior : MonoBehaviour {
         FLEE,
         IDLE
     };
-    public enum AttackType
-    {
-        MELEE,
-        RANGED,
-        IDLE
-    };
-
 
 
 	// Use this for initialization
 	void Start () {
+        Debug.Log(Soldier);
+
 	
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+    {
+        elap += Time.deltaTime;
 
+    if(elap < 3.0f && Soldier != Stance.COMBAT )
+    { Soldier = Stance.COMBAT;  }
+    if (elap > 3.0f && Soldier == Stance.COMBAT)
+    { Soldier = Stance.RETREAT; }
+
+    if(Soldier == Stance.IDLE)
+        { return; }
+ 
+     
+        //Poor Working Change Stance
         switch(Soldier)
-        {  
-            case Stance.IDLE:
-        {
-            break;
-        }
+        {  case Stance.IDLE:
+                { break; }
 
             case Stance.COMBAT:
-        {
-            if (SoldierAttack == AttackType.MELEE)
-            { 
+        {      
                 // Soldiers do Melee attack
+                if (elap < 6.5f) {
+                    break; 
+                }
+                elap = 0.0f;
                 Soldier = Stance.IDLE;
-                break;
-                 
-            }
+                //CurrentChange++;
 
-            else if (SoldierAttack == AttackType.RANGED)
-            {
-                //Soldier do Ranged attack
-                Soldier = Stance.IDLE;
                 break;
-            }
-            else
-            {
-                Soldier = Stance.IDLE;
-                break;
-            }
-            
         }
             case Stance.MOVE:
         {
-
             //if(waypoint == current position)
-            Soldier = Stance.IDLE; 
+            Soldier = Stance.IDLE;
+            CurrentChange++;
 
             break;
         }
@@ -75,7 +70,10 @@ public class UnitBehavior : MonoBehaviour {
         {
 
             //if(current position == waypoint[i-1])
+           
+            elap = 0.0f;
             Soldier = Stance.IDLE;
+            //CurrentChange++;
 
             break;
         }
@@ -87,87 +85,21 @@ public class UnitBehavior : MonoBehaviour {
             break;
         }
 
-    }
-      
+        } if (ChangeCounter == CurrentChange)
+        { return; }
+        ChangeCounter = CurrentChange;
+        Debug.Log(Soldier);
+        Debug.Log(elap);
+        Debug.Log(ChangeCounter);
 
-	
 	}
        
     public void setStance(Stance Soldier)
-    {
-        this.Soldier = Soldier;
-    }
+    { this.Soldier = Soldier; }
     Stance getStance()
-    {
-        return Soldier;
+    { return Soldier; }
     }
 
+           
 
-    public void setAttackType(AttackType SoldierAttack)
-    {
-        this.SoldierAttack = SoldierAttack;
-    }
-    AttackType GetAttackType()
-    { 
-        return SoldierAttack;
-    }
-
-  public  Stance SetStance(int Type)
-    {
-           switch(Type)
-           {
-               case 0:
-                   { Soldier = Stance.COMBAT;
-                   return Soldier;
-                   }
-               case 1:
-                   { Soldier = Stance.MOVE;
-                   return Soldier;
-                   }
-               case 2:
-                   {
-                       Soldier = Stance.RETREAT;
-                   return Soldier;
-                   }
-               case 3:
-                   {
-                       Soldier = Stance.FLEE;
-                   return Soldier;
-                   }
-
-               default:
-                   {
-                       Soldier = Stance.IDLE;
-                       return Soldier;
-                   }
-                   
-        
-                 
-                  
-           }
-
-    }
-    public AttackType SetAttackType(int Type)
-    {
-        switch(Type)
-        {
-            case 0:
-                {
-                    SoldierAttack = AttackType.MELEE;
-                    return SoldierAttack;
-                }
-            case 1:
-                {
-                    SoldierAttack = AttackType.RANGED;
-                    return SoldierAttack;
-
-                }
-            default:
-                {
-                    SoldierAttack = AttackType.IDLE;
-                    return SoldierAttack;
-                }
-        }
-
-    }
-}
+    
