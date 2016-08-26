@@ -36,11 +36,12 @@ public class GameManager : MonoBehaviour
 
     void MoveToMonster()
     {
-        arrArchers[0].projectile.transform.position = Vector3.MoveTowards(arrArchers[0].projectile.transform.position, arrMonsters[0].transform.position, Time.deltaTime * 50);
+        arrArchers[0].projectile.transform.position = Vector3.MoveTowards(arrArchers[0].projectile.transform.position, arrMonsters[0].transform.position, Time.deltaTime * 150);
 
-        if (arrMonsters[0].GetComponent<BoxCollider>().transform.position.x > arrArchers[0].projectile.transform.position.x)
+        if(arrArchers[0].projectile.hit)
         {
-            arrMonsters[0].gameObject.SetActive(false);
+            DebugText.text = "HIT!";
+            arrArchers[0].projectile.gameObject.SetActive(false);
         }
     }
 
