@@ -74,10 +74,10 @@
      <Compile Include="Assets\Scripts\Camera\InputManager.cs" />
      <Compile Include="Assets\Scripts\Classes\Command.cs" />
      <Compile Include="Assets\Scripts\Classes\GeneratorInfo.cs" />
-     <Compile Include="Assets\Scripts\Classes\Object\BackFormation.cs" />
-     <Compile Include="Assets\Scripts\Classes\Object\FrontFormation.cs" />
+     <Compile Include="Assets\Scripts\Classes\Object\Configurations.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\Archer.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\GameManager.cs" />
+     <Compile Include="Assets\Scripts\Classes\Object\Object\Infantry.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\Men.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\Monster.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Object\Object.cs" />
@@ -86,6 +86,7 @@
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Monster\BiteAttack.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Monster\TailAttack.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\Soldiers\Arrow.cs" />
+     <Compile Include="Assets\Scripts\Classes\Object\Weapon\Soldiers\Sword.cs" />
      <Compile Include="Assets\Scripts\Classes\Object\Weapon\WeaponClass.cs" />
      <Compile Include="Assets\Scripts\Object\GeneratorScript.cs" />
      <Compile Include="Assets\Scripts\Object\NegativeScript.cs" />

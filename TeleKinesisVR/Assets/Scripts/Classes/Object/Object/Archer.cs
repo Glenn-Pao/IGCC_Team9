@@ -22,12 +22,12 @@ public class Archer : Object
     protected float startFiringRate;
 
     //to track the number of hits. it should be the same number as projectiles
-    int hitcount = 0;
+    int hitcount = 18;
 
     //Initialize the archer's unit ID and projectile ID
     public void Init()
     {
-        setUnitType(1);
+        unitType = UNIT_TYPE.ARCHER;
 
         //initialize the projectile's positions, ammo count, etc
         for (int i = 0; i < projectiles.Length; i++)
@@ -56,14 +56,18 @@ public class Archer : Object
     {
         for(int i = 0; i < projectiles.Length; i++)
         {
-            if(projectiles[i].hit)
-            {                
+            //check that all game objects are false then enter reload state
+            if (projectiles[i].gameObject.activeInHierarchy && projectiles[i].hit)
+            {
                 projectiles[i].gameObject.SetActive(false);
-                if(i == projectiles.Length - 1)
-                {
-                    //reloading
-                    behaviour.engage = UnitBehavior.ENGAGED_STATE.RELOADING;
-                }
+                hitcount--;
+            }
+
+            if (hitcount < 0)
+            {
+                //reloading
+                behaviour.engage = UnitBehavior.ENGAGED_STATE.RELOADING;
+                hitcount = 18;
             }
         }
     }
@@ -81,6 +85,7 @@ public class Archer : Object
                 projectiles[i].gameObject.SetActive(true);
                 projectiles[i].transform.position = startPosition[i];
                 projectiles[i].hit = false;
+                projectiles[i].hitArrowRain = false;
                 projectiles[i].setAmmoCount(projectiles[i].getAmmoCount() - 1);
             }
             //when finished reloading and there is ammo to fire

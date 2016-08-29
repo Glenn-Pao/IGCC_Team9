@@ -7,9 +7,9 @@ using System.Collections;
 public class Object : MonoBehaviour 
 {
     //an enumeration to identify the unit types
-    protected enum UNIT_TYPE
+    public enum UNIT_TYPE
     {
-        UNKNOWN = 0,
+        INFANTRY = 0,
         ARCHER,
         MONSTER,
         NUM_UNITS,
@@ -17,8 +17,7 @@ public class Object : MonoBehaviour
 
     public int health;                 //health of object
     public bool morale = true;         //morale of object. Set this to true by default.
-    private UNIT_TYPE unitType;        //the unit type of the object
-    protected int unitIDNum;           //the unit ID number of the object.
+    public UNIT_TYPE unitType;         //the unit type of the object
 
     //set the health of this object
     public void setHealth(int health)
@@ -42,34 +41,5 @@ public class Object : MonoBehaviour
     public bool getMorale()
     {
         return morale;
-    }
-
-    //set the unit type of this object
-    public void setUnitType(int unitIDNum)
-    {
-        this.unitIDNum = unitIDNum;
-
-        //based on the ID Number provided, determine the unit type
-        switch(unitIDNum)
-        {
-            case 0:     //unknown
-                unitType = UNIT_TYPE.UNKNOWN;
-                break;
-            case 1:     //archer
-                unitType = UNIT_TYPE.ARCHER;
-                break;
-            case 2:     //monster
-                unitType = UNIT_TYPE.MONSTER;
-                break;
-            default:    //default is set as archer
-                unitType = UNIT_TYPE.ARCHER;
-                break;
-        }
-    }
-
-    //get the unit type of this object
-    public int getUnitType()
-    {
-        return unitIDNum;
     }
 }

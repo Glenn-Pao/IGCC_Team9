@@ -5,6 +5,7 @@ using System.Collections;
 public class Arrow : WeaponClass 
 {
     public bool hit = false;
+    public bool hitArrowRain = false;
 
     public void OnCollisionEnter(Collision collider)
     {
@@ -12,6 +13,11 @@ public class Arrow : WeaponClass
         {
             Debug.Log(hit);
             hit = true;
+        }
+        if(collider.gameObject.tag == "Arrow Rain Position")
+        {
+            Debug.Log(hitArrowRain);
+            hitArrowRain = true;
         }
     }
 }

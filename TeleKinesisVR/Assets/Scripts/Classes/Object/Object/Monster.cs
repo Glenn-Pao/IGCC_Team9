@@ -20,7 +20,7 @@ public class Monster : Object
         //monster definitions
         setHealth(1000);
         setMorale(true);
-        setUnitType(2);
+        unitType = UNIT_TYPE.MONSTER;
 
         //weapon definitions
 
