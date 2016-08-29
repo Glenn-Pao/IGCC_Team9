@@ -27,7 +27,6 @@ public class PositiveScript : MonoBehaviour {
                 elapsed = 0.0f;
 
                 this.transform.FindChild("glow_card").gameObject.SetActive(true);
-                //this.transform.FindChild("red_glow").gameObject.SetActive(false);
             }                
             else
                 return;

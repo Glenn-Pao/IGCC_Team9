@@ -11,13 +11,16 @@ public class InputManager : MonoBehaviour {
 	
 	private float attractSpeed = 0.0f;
 	
-	private GameObject current = null;
+    private GameObject current = null;
     private OVRCameraRig CameraRig;
+
+    //public GameObject back;    //back button
 
     public Text debug;
 
 	// Use this for initialization
-	void Start () {
+	void Start () 
+    {
 	
 	}
 	
@@ -29,7 +32,7 @@ public class InputManager : MonoBehaviour {
 
         if(Physics.Raycast(ray, out hit, 10000))
         {
-            hit.collider.gameObject.GetComponent<PositiveScript>().Targeted();
+           hit.collider.gameObject.GetComponent<PositiveScript>().Targeted();
         }
 	}
 }

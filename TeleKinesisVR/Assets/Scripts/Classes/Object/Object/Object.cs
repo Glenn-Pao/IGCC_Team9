@@ -15,10 +15,10 @@ public class Object : MonoBehaviour
         NUM_UNITS,
     };
 
-    private int health;                 //health of object
-    private bool morale;                //morale of object. Set this to true by default.
-    private UNIT_TYPE unitType;         //the unit type of the object
-    protected int unitIDNum;            //the unit ID number of the object.
+    public int health;                 //health of object
+    public bool morale = true;         //morale of object. Set this to true by default.
+    private UNIT_TYPE unitType;        //the unit type of the object
+    protected int unitIDNum;           //the unit ID number of the object.
 
     //set the health of this object
     public void setHealth(int health)

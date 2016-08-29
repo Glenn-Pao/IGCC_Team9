@@ -19,9 +19,9 @@ public class WeaponClass : MonoBehaviour
     };
     private WEAPON_TYPE type;           //the type of weapon it is
     private int weaponIDNum;            //the ID Number to determine what weapon it is
-    private float firingRate;             //the firing rate of the weapon. in simpler terms, cooldown before next attack
-    private int ammoCount;              //the number of ammo available. melee weapons do not have this component
-    private int damage;                 //the damage this weapon deals if it hits
+    public float firingRate;             //the firing rate of the weapon. in simpler terms, cooldown before next attack
+    public int ammoCount;              //the number of ammo available. melee weapons do not have this component
+    public int damage;                 //the damage this weapon deals if it hits
 
     //set the weapon type based on ID num
     public void setWeaponType(int weaponIDNum)
